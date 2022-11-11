@@ -1,0 +1,192 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background: black;
+}
+
+/* styling the nav-bar */
+
+.header{
+   width: 100%;
+}
+.nav-bar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}   
+.logo{
+   max-width: 100px;
+}
+.nav-links{
+   width: 40%;
+   padding-right: 10px;
+   display: flex;
+   justify-content: space-between;
+}
+.nav-links li{
+   list-style: none;
+}
+.nav-links li a{
+   text-decoration: none;
+   color: white;
+   font-size: 23px;
+}
+
+.nav-links li::after {
+   content: "";
+   display: block;
+   width: 0%;
+   height: 3px;
+   background: blue;
+   margin: auto;
+   transition: 0.5s;
+}
+.nav-links li:hover::after {
+   width: 100%;
+}
+
+.menu{
+   display: none;
+   width: 40px;
+}
+
+/* styling the main content */
+
+.main{
+   width: 95%;
+   color: white;
+   margin: auto;
+}
+.main h1{
+   text-align: center;
+   padding: 20px 0;
+}
+.main h2{
+   text-align: center;
+   margin: 20px 0px;
+}
+.main-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.container{
+   flex-basis: 30%;
+   display: flex;
+   align-items: center;
+   padding: 15px 15px;
+   transition: 1s;
+   margin-bottom: 10px;
+}
+.container:hover{
+   border: 1px solid blue;
+}
+.container img{
+   width: 150px;
+}
+
+.s-container h3{
+   text-align: center;
+   font-size: 23px;
+}
+.s-container p{
+   text-align: center;
+   font-size: 14px;
+   margin: 15px 0;
+}
+.s-container button{
+   text-align: center;
+}
+.btn-center{
+   display: flex;
+   justify-content: center;
+}
+.btn-center a{
+   text-decoration: none;
+   color: #777;
+}
+.btn{
+   padding: 8px 20px;
+   background: lightblack;
+}
+
+
+/* media query for tablet & mobile responsiveness */ 
+
+
+@media all and (max-width: 800px){
+   .logo{
+	width: 80px;
+   }
+   .nav-links li a{
+	font-size: 14px;
+   }
+   .menu{
+	display: block;
+	padding-right: 10px;
+   }
+
+   .s-container h3{
+	font-size: 23px;
+   }
+   .main h1{
+	font-size: 30px;
+   }
+   .s-container p{
+	font-size: 16px;
+   }
+   .container{
+	display: block;
+	flex-basis: 40%;
+	margin: auto;
+   }
+   .nav-links{
+	width: 100%;
+	display: block;
+	position: fixed;
+	top: 70px;
+	right: -100%;
+	padding-right: 0px;
+	background: grey;
+	transition: 0.5s; 
+   }
+   .nav-links li{
+	text-align: center;
+	padding: 10px 0px;
+   }
+   .nav-links li a{
+	font-size: 20px;
+   }
+   .nav-links li:hover{
+	background: blue;
+   }
+   .nav-links li:hover::after {
+	width: 0%;
+   }
+   .container:hover{
+	border: 0.5px solid blue;
+   }
+   .container-pic{
+	display: flex;
+	justify-content: center;
+
+   }
+}
+
+@media all and (max-width: 425px){
+   .main h1{
+	font-size: 25px;
+   }
+   .container img{
+	width: 100px;
+   }
+   .s-container h3{
+	font-size: 20px;
+   }
+   .s-container p{
+	font-size: 14px;
+   }
+}
